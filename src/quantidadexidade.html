@@ -19,7 +19,7 @@
     <script>
         var ctx = document.getElementById("myChart").getContext('2d');
         var myChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: ['20',
                     '21',
@@ -321,7 +321,9 @@
                         'rgba(150,150,150,1)',
                         'rgba(150,150,150,1)'
                     ],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    fill: false,
+                    showLine: false,
                 }]
             },
             options: {
