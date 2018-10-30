@@ -1,7 +1,7 @@
 const csv = require('csvtojson')
 const fs = require("fs");
 
-const csvFile = 'consulta_cand_2018_BRASIL.csv'
+const csvFile = 'data/consulta_cand_2018_BRASIL.csv'
 /*
 csv().fromFile(csvFile).then(res => {
     fs.writeFile('teste.json', JSON.stringify(Object.keys(res[0])), (e) => {

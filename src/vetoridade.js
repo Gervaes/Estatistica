@@ -1,5 +1,5 @@
 const csv = require('csvtojson')
-const csvFile = 'consulta_cand_2018_BRASIL.csv'
+const csvFile = 'data/consulta_cand_2018_BRASIL.csv'
 let idades = new Set()
 let idade = {}
 
