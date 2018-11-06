@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <title>Exemplo Gráfico</title>
+</head>
+
+<body>
+    <div width="200" height="200">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['NORTE', 'NORDESTE', 'CENTRO-OESTE', 'SUDESTE', 'SUL', 'BRASIL'],
+                datasets: [{
+                    label: 'Lê e escreve',
+                    data: [0.9314545020300932, 0.6923336710570753, 1.4506172839506173,
+                        0.6279904306220095, 1.5245799626633478, 0
+                    ],
+                    backgroundColor: 'rgba(255, 35, 182, 0.5)',
+                    borderColor: 'rgba(255, 35, 182, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Ensino fundamental incompleto',
+                    data: [2.7943635060902796, 3.309692671394799, 2.8395061728395063,
+                        3.0701754385964914, 3.1736154324828876, 0
+                    ],
+                    backgroundColor: 'rgba(25, 199, 232, 0.5)',
+                    borderColor: 'rgba(25, 199, 232, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Ensino fundamental completo',
+                    data: [6.185813231430618, 4.896994258696386, 4.8765432098765435, 6.070574162679426,
+                        5.7249533291848165, 0
+                    ],
+                    backgroundColor: 'rgba(125, 35, 52, 0.5)',
+                    borderColor: 'rgba(125, 35, 52, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Ensino médio incompleto',
+                    data: [2.579412467160258, 2.8368794326241136, 3.3333333333333335, 2.880781499202552,
+                        2.271313005600498, 0
+                    ],
+                    backgroundColor: 'rgba(100, 50, 200, 0.5)',
+                    borderColor: 'rgba(100, 50, 200, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Ensino médio completo',
+                    data: [33.26964413661333, 31.56028368794326, 23.364197530864196, 29.804625199362043,
+                        21.281891723708775, 0
+                    ],
+                    backgroundColor: 'rgba(200, 50, 150, 0.5)',
+                    borderColor: 'rgba(200, 50, 150, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Superior incompleto',
+                    data: [6.926200143300693, 8.679500168861871, 9.351851851851851, 9.280303030303031,
+                        11.294337274424393, 3.8461538461538463
+                    ],
+                    backgroundColor: 'rgba(100, 150, 50, 0.5)',
+                    borderColor: 'rgba(100, 150, 50, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'Superior completo',
+                    data: [47.313112013374734, 48.02431610942249, 54.78395061728395, 48.26555023923445,
+                        54.729309271935286, 96.15384615384616
+                    ],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

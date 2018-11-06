@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+    <title>Exemplo Gráfico</title>
+</head>
+
+<body>
+    <div width="200" height="200">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById("myChart").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['NORTE', 'NORDESTE', 'CENTRO-OESTE', 'SUDESTE', 'SUL', 'BRASIL'],
+                datasets: [{
+                    label: 'PARDA',
+                    data: [44.77124183006536, 29.9645390070922, 19.892473118279568, 13.900414937759336,
+                        2.8, 0
+                    ],
+                    backgroundColor: 'rgba(255, 35, 182, 0.5)',
+                    borderColor: 'rgba(255, 35, 182, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'PRETA',
+                    data: [3.5947712418300655, 5.141843971631205, 2.150537634408602, 5.601659751037344,
+                        2.4, 0
+                    ],
+                    backgroundColor: 'rgba(25, 199, 232, 0.5)',
+                    borderColor: 'rgba(25, 199, 232, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'BRANCA',
+                    data: [51.30718954248366, 64.8936170212766, 77.95698924731182, 80.08298755186722,
+                        94.4, 50
+                    ],
+                    backgroundColor: 'rgba(125, 35, 52, 0.5)',
+                    borderColor: 'rgba(125, 35, 52, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'IND�GENA',
+                    data: [0.32679738562091504, 0, 0, 0, 0, 50],
+                    backgroundColor: 'rgba(100, 50, 200, 0.5)',
+                    borderColor: 'rgba(100, 50, 200, 1)',
+                    borderWidth: 1
+                }, {
+                    label: 'AMARELA',
+                    data: [0, 0, 0, 0.4149377593360996, 0.4, 0],
+                    backgroundColor: 'rgba(150, 50, 150, 0.5)',
+                    borderColor: 'rgba(150, 50, 150, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                showAllTooltips: true,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
