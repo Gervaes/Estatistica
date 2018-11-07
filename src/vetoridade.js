@@ -1,4 +1,5 @@
 const csv = require('csvtojson')
+const fs = require('fs')
 const csvFile = 'data/consulta_cand_2018_BRASIL.csv'
 let idades = new Set()
 let idade = {}
@@ -19,6 +20,14 @@ csv().fromFile(csvFile).then(res => {
             todas.push(r.NR_IDADE_DATA_POSSE)
         }
     });
+    fs.writeFile('data/idades.json', JSON.stringify(todas), (e) => {
+        if (e) {
+            console.log(e);
+            return;
+        }
+        console.log('Arquivo criado!')
+    })
+    /*
     Array.from(idades).forEach(i => {
         idade[i] = 0
     })
@@ -28,4 +37,5 @@ csv().fromFile(csvFile).then(res => {
     })
     console.log(`total:${total.tt}\nquantidade:${total.qtdd}\nmédia: ${total.tt / total.qtdd}`)
     console.log(`mediana:${todas.sort()[todas.length / 2]}`)
+    */
 })
